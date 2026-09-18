@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Guardians of the Hollow | Randy Darnell</title>
+  <meta name="description" content="Enter the world of Guardians of the Hollow by Randy Darnell — a 1950s West Virginia adventure of faith, family, folklore, and things that should have remained legends." />
+  <meta name="theme-color" content="#11110f" />
+  <meta property="og:title" content="Guardians of the Hollow | Randy Darnell" />
+  <meta property="og:description" content="Some legends should never be awakened." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://guardiansofthehollow.com/" />
+  <meta property="og:image" content="https://guardiansofthehollow.com/cover.webp" />
+  <link rel="icon" href="favicon.png" />
+  <style>
+    :root{
+      --ink:#11110f;
+      --ink-soft:#191915;
+      --cream:#eee3c9;
+      --cream-soft:#cbbf9f;
+      --gold:#b99a57;
+      --gold-bright:#d8bc78;
+      --line:rgba(216,188,120,.26);
+      --mist:rgba(230,226,207,.08);
+      --max:1160px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      color:var(--cream);
+      background:
+        radial-gradient(circle at 18% 10%, rgba(101,113,94,.14), transparent 31rem),
+        radial-gradient(circle at 80% 37%, rgba(102,80,49,.12), transparent 34rem),
+        linear-gradient(180deg,#0d0e0c 0%,#151510 47%,#0d0e0c 100%);
+      font-family:Georgia,"Times New Roman",serif;
+      line-height:1.65;
+      min-height:100vh;
+    }
+    body::before{
+      content:"";
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      opacity:.18;
+      background-image:
+        repeating-linear-gradient(0deg,transparent 0,transparent 3px,rgba(255,255,255,.015) 4px),
+        radial-gradient(circle at 30% 20%,rgba(255,255,255,.07) 0 1px,transparent 1.4px),
+        radial-gradient(circle at 70% 50%,rgba(255,255,255,.04) 0 1px,transparent 1.2px);
+      background-size:auto,57px 61px,83px 91px;
+      z-index:100;
+      mix-blend-mode:screen;
+    }
+    a{color:inherit}
+    img,video{max-width:100%;display:block}
+    .wrap{width:min(calc(100% - 40px),var(--max));margin-inline:auto}
+
+    .site-header{
+      position:sticky;top:0;z-index:50;
+      background:rgba(13,14,12,.88);
+      backdrop-filter:blur(14px);
+      border-bottom:1px solid rgba(216,188,120,.13);
+    }
+    .nav{
+      min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px;
+    }
+    .brand{text-decoration:none;letter-spacing:.12em;text-transform:uppercase;font-size:.88rem;font-weight:700;color:var(--gold-bright)}
+    .nav-links{display:flex;align-items:center;gap:26px;font-size:.82rem;letter-spacing:.11em;text-transform:uppercase}
+    .nav-links a{text-decoration:none;color:#d8cfb8;transition:.2s ease}
+    .nav-links a:hover{color:var(--gold-bright)}
+    .nav-buy{padding:10px 16px;border:1px solid var(--gold);border-radius:2px}
+    .menu-btn{display:none;background:none;border:1px solid var(--line);color:var(--cream);padding:8px 11px;font:inherit}
+
+    .hero{position:relative;overflow:hidden;padding:86px 0 90px;border-bottom:1px solid rgba(216,188,120,.13)}
+    .hero::after{
+      content:"";position:absolute;inset:auto -10% -120px;height:320px;
+      background:radial-gradient(ellipse at center,rgba(190,202,188,.13),transparent 65%);
+      filter:blur(18px);pointer-events:none;
+    }
+    .hero-grid{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(300px,.68fr);gap:70px;align-items:center}
+    .eyebrow{font-size:.82rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold-bright);margin:0 0 18px}
+    h1,h2,h3{font-weight:500;line-height:1.08;margin-top:0}
+    h1{font-size:clamp(3.4rem,8vw,7.35rem);letter-spacing:-.055em;margin-bottom:18px;text-wrap:balance}
+    .tagline{font-style:italic;color:var(--gold-bright);font-size:clamp(1.35rem,2.6vw,2rem);margin:0 0 26px}
+    .lead{max-width:700px;color:#d5ccb4;font-size:1.08rem;margin:0 0 34px}
+    .actions{display:flex;flex-wrap:wrap;gap:14px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 22px;text-decoration:none;text-transform:uppercase;letter-spacing:.12em;font-size:.78rem;font-weight:700;border:1px solid var(--gold);transition:.2s ease}
+    .btn.primary{background:var(--gold);color:#11110f}
+    .btn.primary:hover{background:var(--gold-bright);border-color:var(--gold-bright);transform:translateY(-1px)}
+    .btn.ghost:hover{background:rgba(216,188,120,.08)}
+    .cover-shell{position:relative;max-width:390px;margin-inline:auto}
+    .cover-shell::before{content:"";position:absolute;inset:8% -10% -7%;background:rgba(0,0,0,.62);filter:blur(28px);z-index:-1}
+    .cover-shell img{border:1px solid rgba(216,188,120,.44);box-shadow:0 30px 70px rgba(0,0,0,.55);transform:rotate(1.2deg)}
+
+    section{padding:92px 0;border-bottom:1px solid rgba(216,188,120,.1)}
+    .section-kicker{text-transform:uppercase;letter-spacing:.22em;font-size:.76rem;color:var(--gold-bright);margin-bottom:10px}
+    h2{font-size:clamp(2.25rem,5vw,4.15rem);letter-spacing:-.035em;margin-bottom:24px}
+    .section-copy{color:#cfc5ad;max-width:720px;font-size:1.04rem}
+
+    .trailer-grid{display:grid;grid-template-columns:.72fr 1fr;gap:68px;align-items:center}
+    .video-frame{width:min(100%,430px);margin:auto;position:relative;padding:10px;border:1px solid var(--line);background:#080907;box-shadow:0 28px 70px rgba(0,0,0,.45)}
+    .video-frame::before,.video-frame::after{content:"";position:absolute;width:42px;height:42px;border-color:var(--gold);opacity:.6}
+    .video-frame::before{left:-1px;top:-1px;border-left:2px solid;border-top:2px solid}
+    .video-frame::after{right:-1px;bottom:-1px;border-right:2px solid;border-bottom:2px solid}
+    video{width:100%;aspect-ratio:3/4;object-fit:cover;background:#000}
+    .trailer-note{color:#9f967f;font-size:.88rem;margin-top:12px;text-align:center;font-style:italic}
+
+    .book-grid{display:grid;grid-template-columns:.68fr 1fr;gap:70px;align-items:center}
+    .book-grid .cover-small{max-width:350px;margin:auto;border:1px solid rgba(216,188,120,.38);box-shadow:0 24px 60px rgba(0,0,0,.5)}
+    .facts{display:flex;flex-wrap:wrap;gap:8px 18px;margin:26px 0 32px;color:#aea58e;font-size:.86rem;text-transform:uppercase;letter-spacing:.1em}
+    .facts span:not(:last-child)::after{content:"•";margin-left:18px;color:var(--gold)}
+
+    .stories-intro{display:flex;justify-content:space-between;gap:40px;align-items:end;margin-bottom:45px}
+    .stories-intro .section-copy{margin:0}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+    .story-card{background:linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,.012));border:1px solid var(--line);padding:14px 14px 22px;transition:.25s ease}
+    .story-card:hover{transform:translateY(-5px);border-color:rgba(216,188,120,.5)}
+    .story-card img{width:100%;aspect-ratio:2/3;object-fit:cover;margin-bottom:20px}
+    .story-card .num{color:var(--gold-bright);font-size:.7rem;letter-spacing:.2em;text-transform:uppercase}
+    .story-card h3{font-size:1.48rem;margin:8px 0 0;color:#f0e5c9}
+
+    .quote{padding:90px 0;text-align:center;background:radial-gradient(circle at 50% 50%,rgba(216,188,120,.08),transparent 60%)}
+    .quote blockquote{font-size:clamp(1.9rem,4vw,3.7rem);line-height:1.18;max-width:900px;margin:0 auto;font-style:italic;color:#eadbb7}
+    .quote cite{display:block;margin-top:22px;text-transform:uppercase;letter-spacing:.18em;font-size:.72rem;color:#8f866e;font-style:normal}
+
+    .about-grid{display:grid;grid-template-columns:.7fr 1fr;gap:70px;align-items:start}
+    .initial{width:140px;height:140px;border:1px solid var(--gold);display:grid;place-items:center;font-size:3rem;color:var(--gold-bright);position:relative}
+    .initial::after{content:"";position:absolute;inset:10px;border:1px solid rgba(216,188,120,.26)}
+    .about-copy p{color:#cfc5ad;margin-top:0}
+
+    .final-cta{text-align:center;padding:100px 0 110px}
+    .final-cta p{max-width:650px;margin:0 auto 30px;color:#c8bea7}
+    .final-cta h2{margin-bottom:18px}
+
+    footer{padding:35px 0 48px;color:#867e69;font-size:.84rem}
+    .footer-row{display:flex;justify-content:space-between;gap:24px;align-items:center}
+    .footer-row a{text-decoration:none;color:#aaa086}
+
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity .65s ease,transform .65s ease}
+    .reveal.visible{opacity:1;transform:none}
+
+    @media (max-width:860px){
+      .hero-grid,.trailer-grid,.book-grid,.about-grid{grid-template-columns:1fr;gap:45px}
+      .hero{padding-top:64px}
+      .hero-copy{text-align:center}
+      .lead{margin-inline:auto}
+      .actions{justify-content:center}
+      .cover-shell{max-width:330px}
+      .trailer-grid .copy{order:-1}
+      .book-grid .cover-small{max-width:310px}
+      .cards{grid-template-columns:1fr;max-width:540px;margin:auto}
+      .stories-intro{display:block}
+      .initial{margin:auto}
+      .about-copy{text-align:center}
+      .nav-links{display:none;position:absolute;top:72px;left:0;right:0;background:#10110f;border-bottom:1px solid var(--line);padding:22px 20px;flex-direction:column;align-items:stretch;text-align:center}
+      .nav-links.open{display:flex}
+      .menu-btn{display:block}
+      .nav-buy{border:none;padding:0}
+    }
+    @media (max-width:520px){
+      .wrap{width:min(calc(100% - 26px),var(--max))}
+      .hero{padding:54px 0 66px}
+      section{padding:72px 0}
+      h1{font-size:3.35rem}
+      .facts{display:block}
+      .facts span{display:block;margin:6px 0}
+      .facts span:not(:last-child)::after{display:none}
+      .footer-row{display:block;text-align:center}
+      .footer-row div+div{margin-top:8px}
+    }
+    @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}.story-card,.btn{transition:none}}
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="brand" href="#top">Guardians of the Hollow</a>
+      <button class="menu-btn" type="button" aria-label="Open navigation" aria-expanded="false">Menu</button>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#trailer">Trailer</a>
+        <a href="#book">The Book</a>
+        <a href="#stories">Stories</a>
+        <a href="#author">Author</a>
+        <a class="nav-buy" href="https://www.amazon.com/s?k=Guardians+of+the+Hollow+Randy+Darnell" target="_blank" rel="noopener">Buy</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">West Virginia · 1954</p>
+          <h1>Guardians<br>of the Hollow</h1>
+          <p class="tagline">Some legends should never be awakened.</p>
+          <p class="lead">Charlotte, Sylvia, and Rance grew up hearing stories whispered through the mountains. Then the stories began watching back. Step into a West Virginia adventure where family, faith, and courage stand between home and the darkness beyond the hollow.</p>
+          <div class="actions">
+            <a class="btn primary" href="https://www.amazon.com/s?k=Guardians+of+the+Hollow+Randy+Darnell" target="_blank" rel="noopener">Find the Book</a>
+            <a class="btn ghost" href="#trailer">Watch the Promo</a>
+          </div>
+        </div>
+        <div class="cover-shell reveal">
+          <img src="cover.webp" alt="Guardians of the Hollow Volume 1 by Randy Darnell book cover" width="1100" height="1650" />
+        </div>
+      </div>
+    </section>
+
+    <section id="trailer">
+      <div class="wrap trailer-grid">
+        <div class="video-frame reveal">
+          <video autoplay muted loop playsinline controls poster="promo-poster.jpg" aria-label="Guardians of the Hollow promotional video">
+            <source src="promo.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <p class="trailer-note">Turn on sound for the full promo.</p>
+        </div>
+        <div class="copy reveal">
+          <p class="section-kicker">Enter the Hollow</p>
+          <h2>The legends are closer than they seem.</h2>
+          <p class="section-copy">In one quiet West Virginia hollow, old stories are part of everyday life. But when strange visitors, forgotten places, and creatures from Appalachian legend begin crossing into the lives of three siblings, the Darnell family discovers that the mountains have kept more than memories.</p>
+          <p class="section-copy">Volume One brings together three connected adventures that deepen the mystery while pulling Charlotte, Sylvia, and Rance toward a calling none of them expected.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="book">
+      <div class="wrap book-grid">
+        <img class="cover-small reveal" src="cover.webp" alt="Guardians of the Hollow Volume 1 cover" width="1100" height="1650" />
+        <div class="reveal">
+          <p class="section-kicker">Volume One</p>
+          <h2>Three stories. One awakening.</h2>
+          <p class="section-copy">Set against the misty roads, mining towns, forests, and forgotten institutions of 1950s West Virginia, <em>Guardians of the Hollow</em> blends supernatural mystery with family adventure. Each encounter reveals another piece of a larger secret — and another reason the old legends were never meant to be dismissed.</p>
+          <div class="facts"><span>West Virginia</span><span>1954</span><span>Supernatural Adventure</span></div>
+          <a class="btn primary" href="https://www.amazon.com/s?k=Guardians+of+the+Hollow+Randy+Darnell" target="_blank" rel="noopener">Find on Amazon</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="stories">
+      <div class="wrap">
+        <div class="stories-intro reveal">
+          <div>
+            <p class="section-kicker">Inside Volume One</p>
+            <h2>Stories from the Hollow</h2>
+          </div>
+          <p class="section-copy">Three encounters move the family deeper into the hidden world beneath familiar West Virginia legends.</p>
+        </div>
+        <div class="cards">
+          <article class="story-card reveal">
+            <img loading="lazy" src="mothman.webp" alt="The Night of the Mothman story cover" width="1100" height="1650" />
+            <span class="num">Story One</span>
+            <h3>The Night of the Mothman</h3>
+          </article>
+          <article class="story-card reveal">
+            <img loading="lazy" src="mammoth.webp" alt="The Ghost Whispers of Mammoth story cover" width="1100" height="1650" />
+            <span class="num">Story Two</span>
+            <h3>The Ghost Whispers of Mammoth</h3>
+          </article>
+          <article class="story-card reveal">
+            <img loading="lazy" src="raven.webp" alt="Beware the Raven Mocker story cover" width="1100" height="1650" />
+            <span class="num">Story Three</span>
+            <h3>Beware the Raven Mocker</h3>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <div class="quote">
+      <div class="wrap reveal">
+        <blockquote>“Some legends should never be awakened.”</blockquote>
+        <cite>Guardians of the Hollow</cite>
+      </div>
+    </div>
+
+    <section id="author">
+      <div class="wrap about-grid">
+        <div class="initial reveal" aria-hidden="true">RD</div>
+        <div class="about-copy reveal">
+          <p class="section-kicker">About the Author</p>
+          <h2>Randy Darnell</h2>
+          <p>Randy Darnell is an educator, pastor, and author whose storytelling draws on West Virginia history, Appalachian folklore, faith, and family. <em>Guardians of the Hollow</em> brings those threads together in an adventure built around ordinary people facing extraordinary mysteries.</p>
+          <p>The world of the Hollow is only beginning. Future stories will continue exploring the legends, places, and secrets waiting beyond the familiar mountain roads.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta">
+      <div class="wrap reveal">
+        <p class="section-kicker">The Hollow Is Waiting</p>
+        <h2>Begin with Volume One.</h2>
+        <p>Meet Charlotte, Sylvia, and Rance — and discover what happens when the stories everyone knows become impossible to ignore.</p>
+        <a class="btn primary" href="https://www.amazon.com/s?k=Guardians+of+the+Hollow+Randy+Darnell" target="_blank" rel="noopener">Find Guardians of the Hollow</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-row">
+      <div>© <span id="year"></span> Randy Darnell. All rights reserved.</div>
+      <div><a href="#top">guardiansofthehollow.com</a></div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const menuButton = document.querySelector('.menu-btn');
+    const navLinks = document.querySelector('.nav-links');
+    menuButton.addEventListener('click', () => {
+      const open = navLinks.classList.toggle('open');
+      menuButton.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      menuButton.setAttribute('aria-expanded','false');
+    }));
+
+    const items = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {threshold:.12});
+      items.forEach(item => observer.observe(item));
+    } else {
+      items.forEach(item => item.classList.add('visible'));
+    }
+  </script>
+</body>
+</html>
